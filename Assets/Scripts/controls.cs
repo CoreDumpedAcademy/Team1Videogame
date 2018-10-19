@@ -8,7 +8,8 @@ public class controls : MonoBehaviour {
 	public float maxSpeed = 5f;
     public float speed = 2f;
     public bool grounded;
-	public float jumPower = 10f;
+    public bool dead;
+    public float jumPower = 10f;
 
     
     private Rigidbody2D rb2d;
@@ -18,6 +19,7 @@ public class controls : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb2d = GetComponent<Rigidbody2D>();
+        dead = false;
 	}
 	
 	// Update is called once per frame
