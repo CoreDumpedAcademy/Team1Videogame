@@ -37,3 +37,6 @@ sysinfo.txt
 
 # Thumbs
 Thumbs.db*
+
+# Unity meta files
+*.meta
