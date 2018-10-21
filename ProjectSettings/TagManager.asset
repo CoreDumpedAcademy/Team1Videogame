@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Deadly
+  - 1UP
   layers:
   - Default
   - TransparentFX

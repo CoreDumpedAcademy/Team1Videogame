@@ -10,7 +10,7 @@ public class checkGround : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
     player = GetComponentInParent<controls>();
-	}
+    }
 
      void OnCollisionStay2D(Collision2D col)
     {

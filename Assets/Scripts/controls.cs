@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class controls : MonoBehaviour {
 
 
@@ -55,4 +56,5 @@ public class controls : MonoBehaviour {
 			jump = false;
 		}
 	}
+
 }
