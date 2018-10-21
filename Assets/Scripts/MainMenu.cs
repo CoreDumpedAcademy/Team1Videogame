@@ -41,7 +41,7 @@ public class MainMenu : MonoBehaviour
     public void scoreboard()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("ScoreBorad");
+        SceneManager.LoadScene("ScoreBoard");
         Debug.Log("score...");
     }
 

@@ -27,7 +27,7 @@ public class DeadMenu : MonoBehaviour
     public void scoreboard()
     {
         
-        SceneManager.LoadScene("ScoreBorad");
+        SceneManager.LoadScene("ScoreBoard");
         Debug.Log("score...");
         Time.timeScale = 1f;
 
