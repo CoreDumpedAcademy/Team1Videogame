@@ -11,8 +11,7 @@ public class controls : MonoBehaviour {
     public bool grounded;
     public bool dead;
     public float jumPower = 10f;
-
-    
+    public ScoreManager player;
     private Rigidbody2D rb2d;
 	private bool jump;
 
@@ -20,6 +19,7 @@ public class controls : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb2d = GetComponent<Rigidbody2D>();
+        player = GetComponentInParent<ScoreManager>();
         dead = false;
 	}
 	
@@ -30,7 +30,8 @@ public class controls : MonoBehaviour {
 			jump = true;
 
         }
-	}
+        
+    }
 
 	void FixedUpdate(){
 
@@ -56,5 +57,15 @@ public class controls : MonoBehaviour {
 			jump = false;
 		}
 	}
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "1UP")
+        {
+            Destroy(col.gameObject);
+            player.score += 500;
+            Debug.Log(player.score);
+        }
+    }
 
 }
