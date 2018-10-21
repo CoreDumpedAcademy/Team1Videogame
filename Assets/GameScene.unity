@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 615093426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 818f38a3f1a12f9418fc7fa5c27c7535, type: 3}
+  m_Script: {fileID: 11500000, guid: 172cf80e4becea74182c54635df7729e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &615093431
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 615093426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b63e95bf6812f1440853c86ce994a34e, type: 3}
+  m_Script: {fileID: 11500000, guid: 119c2ef9200550248916e93b83a41977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Playerdead: 0
@@ -683,7 +683,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 764116078}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0c7775de12f7dde42915aaa88f3a8959, type: 2}
+  m_Material: {fileID: 6200000, guid: e32d5a57f97d98743875cb95bff04fd3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -998,7 +998,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 928119024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65d628c3d1fc4e249bca792b539fbca1, type: 3}
+  m_Script: {fileID: 11500000, guid: eefff95bdae6cd94ba785be25aade82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 910727020}
@@ -1124,7 +1124,7 @@ Prefab:
         type: 2}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: dc6f61c7fb3b18247bcbb6256b72e314, type: 2}
+      objectReference: {fileID: 6200000, guid: e8fa65204a661ce42b344cd8384d4e88, type: 2}
     - target: {fileID: 61228986266614772, guid: 016ea34a86c4f81439f321318ec50590,
         type: 2}
       propertyPath: m_Size.y
@@ -1553,7 +1553,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1742426914}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0c7775de12f7dde42915aaa88f3a8959, type: 2}
+  m_Material: {fileID: 6200000, guid: e32d5a57f97d98743875cb95bff04fd3, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1597,7 +1597,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1757265662}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b63e95bf6812f1440853c86ce994a34e, type: 3}
+  m_Script: {fileID: 11500000, guid: 119c2ef9200550248916e93b83a41977, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Playerdead: 0
@@ -2470,7 +2470,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2086666901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed85229812ac6a94193ea5b1fa175462, type: 3}
+  m_Script: {fileID: 11500000, guid: da7c41f5a8562b64f9a1cd26f2a8e119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Score: {fileID: 475043633}
