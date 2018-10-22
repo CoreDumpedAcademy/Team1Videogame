@@ -14,6 +14,11 @@ public class checkGround : MonoBehaviour {
 
      void OnCollisionStay2D(Collision2D col)
     {
+        if (col.gameObject.tag == "Platform")
+        {
+            player.grounded = true;
+            player.transform.parent = col.transform;
+        }
         if (col.gameObject.tag == "Ground")
         {
             player.grounded = true;
@@ -22,6 +27,11 @@ public class checkGround : MonoBehaviour {
 
      void OnCollisionExit2D(Collision2D col)
     {
+        if (col.gameObject.tag == "Platform")
+        {
+            player.grounded = false;
+            player.transform.parent = null;
+        }   
         if (col.gameObject.tag == "Ground")
         {
             player.grounded = false;
