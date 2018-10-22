@@ -39,4 +39,4 @@ sysinfo.txt
 Thumbs.db*
 
 # Unity meta files
-*.meta
+#*.meta
