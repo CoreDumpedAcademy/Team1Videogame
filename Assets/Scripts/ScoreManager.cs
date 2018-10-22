@@ -7,13 +7,15 @@ public class ScoreManager : MonoBehaviour {
 
     public Text Score;
     public float timer;
-    public int score = 0;
+    public int score;
 
     Dictionary<string, Dictionary<string, int>> playerScores;
 	// Use this for initialization
 	void Start () {
         SetScore("raular4322", "puntos", 10000);
         Debug.Log(GetScore("raular4322", "puntos"));
+        score = 0;
+        refreshScore();
     }
     void init()
     {
@@ -63,9 +65,14 @@ public class ScoreManager : MonoBehaviour {
         if (timer > 5f)
         {
             score += 100;
-            Score.text = "Score: " + score;
-            Debug.Log(score);
+            refreshScore();
             timer = 0;
         }
+    }
+
+    public void refreshScore()
+    {
+        Score.text = "Score: " + score;
+        Debug.Log(score);
     }
 }

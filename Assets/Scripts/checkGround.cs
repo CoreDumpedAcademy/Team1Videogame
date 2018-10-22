@@ -17,7 +17,7 @@ public class checkGround : MonoBehaviour {
         if (col.gameObject.tag == "Platform")
         {
             player.grounded = true;
-            player.transform.parent = col.transform;
+            //player.transform.parent = col.transform;
         }
         if (col.gameObject.tag == "Ground")
         {
@@ -30,7 +30,7 @@ public class checkGround : MonoBehaviour {
         if (col.gameObject.tag == "Platform")
         {
             player.grounded = false;
-            player.transform.parent = null;
+            //player.transform.parent = null;
         }   
         if (col.gameObject.tag == "Ground")
         {
