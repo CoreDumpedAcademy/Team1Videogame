@@ -9,11 +9,6 @@ public class platformMovement : MonoBehaviour {
 	public GameObject Platforms;
 	public Vector2 speed;
 
-    private void Start()
-    {
-        speed = new Vector2(1, 0);
-    }
-
     // Update is called once per frame
     void Update () {
 		direction = new Vector2 (-1, 0);

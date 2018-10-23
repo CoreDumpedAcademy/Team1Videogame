@@ -7,20 +7,26 @@ public class controls : MonoBehaviour {
 
 
 	public float maxSpeed = 5f;
-    public float speed = 2f;
+    public float speed = 5f;
     public bool grounded;
     public bool dead;
     public float jumPower = 10f;
     public ScoreManager player;
     private Rigidbody2D rb2d;
 	private bool jump;
+    public bool platform;
+    private Vector2 position;
+    private Vector2 direction;
+    private GameObject Platforms;
+    private Vector2 playerSpeed;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         rb2d = GetComponent<Rigidbody2D>();
         player = GetComponentInParent<ScoreManager>();
         dead = false;
+        playerSpeed = new Vector2(1, 0);
 	}
 	
 	// Update is called once per frame
@@ -30,7 +36,20 @@ public class controls : MonoBehaviour {
 			jump = true;
 
         }
-        
+        if (platform)
+        {
+            direction = new Vector2(-1, 0);
+
+            Vector2 movement = new Vector2(direction.x * playerSpeed.x, 0);
+            movement *= Time.deltaTime;
+            transform.Translate(movement);
+            position = new Vector2(10f, Random.Range(-5f, 5f));
+        }
+        else
+        {
+
+        }
+            
     }
 
 	void FixedUpdate(){
@@ -58,14 +77,6 @@ public class controls : MonoBehaviour {
 		}
 	}
 
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "1UP")
-        {
-            Destroy(col.gameObject);
-            player.score += 500;
-            player.refreshScore();
-        }
-    }
+   
 
 }
