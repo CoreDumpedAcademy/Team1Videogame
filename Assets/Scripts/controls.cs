@@ -58,14 +58,6 @@ public class controls : MonoBehaviour {
 		}
 	}
 
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "1UP")
-        {
-            Destroy(col.gameObject);
-            player.score += 500;
-            player.refreshScore();
-        }
-    }
+   
 
 }
