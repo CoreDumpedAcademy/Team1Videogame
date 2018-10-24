@@ -38,5 +38,5 @@ sysinfo.txt
 # Thumbs
 Thumbs.db*
 
-# Unity meta files
-#*.meta
+# ScoreBoard file
+s.bin

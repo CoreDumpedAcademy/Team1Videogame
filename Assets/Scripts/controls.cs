@@ -64,7 +64,7 @@ public class controls : MonoBehaviour {
         {
             Destroy(col.gameObject);
             player.score += 500;
-            player.refreshScore();
+            player.RefreshScore();
         }
     }
 
