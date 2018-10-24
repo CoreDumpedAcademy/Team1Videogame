@@ -1231,6 +1231,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1976804937499970, guid: a096c04248fe32540bc11cd9fb415d7d, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a096c04248fe32540bc11cd9fb415d7d, type: 2}
   m_IsPrefabAsset: 0
@@ -2655,9 +2659,9 @@ GameObject:
   - component: {fileID: 2086666902}
   - component: {fileID: 2086666905}
   - component: {fileID: 2086666904}
-  - component: {fileID: 2086666906}
   - component: {fileID: 2086666907}
   - component: {fileID: 2086666908}
+  - component: {fileID: 2086666906}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2756,7 +2760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b186f2468afcb0e42a1307d8fecef6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
+  maxSpeed: 3
   speed: 35
   grounded: 0
   dead: 0
@@ -2774,8 +2778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de7019870f55cff4791f273c77e19562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fall: 2
-  lowJump: 2
+  fall: 1.25
+  lowJump: 1.25
 --- !u!114 &2086666907
 MonoBehaviour:
   m_ObjectHideFlags: 0
