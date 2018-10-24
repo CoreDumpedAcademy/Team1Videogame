@@ -19,4 +19,8 @@ public class platformMovement : MonoBehaviour {
 		transform.Translate (movement);
 		position = new Vector2 ( 10f,0f);
 	}
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }
