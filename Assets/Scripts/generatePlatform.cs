@@ -31,11 +31,11 @@ public class generatePlatform : MonoBehaviour {
 	void Update () {
 
         x = 12.4f;
-        y = Random.Range(-3f, -1.5f);
+        y = Random.Range(-3f, -1.75f);
         z = 0;
-        y2 = Random.Range(-1.5f, 0f);
-        y3 = Random.Range(0f, 1.5f);
-        y4 = Random.Range(1.5f, 3f);
+        y2 = Random.Range(-1.75f, -0.5f);
+        y3 = Random.Range(-0.5f, 0.75f);
+        y4 = Random.Range(0.75f, 2f);
 
 
         pos = new Vector3(x, y, z);
@@ -73,4 +73,5 @@ public class generatePlatform : MonoBehaviour {
         Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
         Invoke("GeneradorPlataformas", Random.Range(tiempoMin, tiempoMax));
     }
+
 }
