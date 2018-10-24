@@ -15,7 +15,8 @@ public class platformMovement : MonoBehaviour {
 
 		Vector2 movement = new Vector2 (direction.x * speed.x, 0);
 		movement *= Time.deltaTime;
+
 		transform.Translate (movement);
-		position = new Vector2 ( 10f,Random.Range (-5f, 5f));
+		position = new Vector2 ( 10f,0f);
 	}
 }
