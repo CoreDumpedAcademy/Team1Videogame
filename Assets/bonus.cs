@@ -6,16 +6,17 @@ public class bonus : MonoBehaviour {
 
     public ScoreManager player;
     public int puntos;
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         player = GetComponentInParent<ScoreManager>();
         puntos = 500;
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+       
+    }
     void Awake()
     {
         BoxCollider2D bc;
