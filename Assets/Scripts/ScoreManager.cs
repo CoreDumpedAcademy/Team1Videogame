@@ -11,6 +11,7 @@ public class ScoreManager : MonoBehaviour {
     public Text Score;
     public float timer;
     public int score;
+    private bool isSaved;
 
     public Dictionary<int, KeyValuePair<int, string>> playerScores;
 
@@ -19,6 +20,7 @@ public class ScoreManager : MonoBehaviour {
         Init();
         score = 0;
         RefreshScore();
+        isSaved = false;
     }
 
     void Init()
@@ -28,32 +30,67 @@ public class ScoreManager : MonoBehaviour {
         LoadScoreBoard();
     }
     
-    public void SetScore(int value, string username)
+    public void SetScore(string username)
     {
-        AddScoreInOrder(value, username);
-
-        SaveScoreBoard();
-    }
-
-    private void AddScoreInOrder(int score, string playerName)
-    {
-        KeyValuePair<int, string> register;
-
-        for (int i = playerScores.Count; i > 0; i--)
+        if (!isSaved)
         {
-            if(playerScores.TryGetValue(i, out register))
-            {
-                if(register.Key < score)
-                {
-
-                }
-            }
+            isSaved = true;
+            AddScoreInOrder(username);
+            SaveScoreBoard();
         }
     }
 
-    private void AddScore(int position, int score, string playerName)
+    private void AddScoreInOrder(string playerName)
     {
-        playerScores.Add(position, new KeyValuePair<int, string>(score, playerName));
+        if (playerScores.Count > 0) {
+            orderScoreBoard(playerName);
+        }
+        else
+        {
+            Debug.Log("Saved file not found");
+            AddScore(1, score, playerName);
+        }
+    }
+
+    private void orderScoreBoard(string playerName)
+    {
+        KeyValuePair<int, string> register;
+        bool saved = false;
+        int i = 1, partialScore = score, counter = playerScores.Count + 1;
+        string partialPlayerName = playerName;
+
+        while (i <= counter || !saved)
+        {
+            if (playerScores.TryGetValue(i, out register))
+            {
+                playerScores.Remove(i);
+
+                if (register.Key < partialScore)
+                {
+                    AddScore(i, partialScore, partialPlayerName);
+                    saved = true;
+                    
+                    partialScore = register.Key;
+                    partialPlayerName = register.Value;
+                }
+                else
+                {
+                    AddScore(i, register.Key, register.Value);
+                }
+            }
+            else
+            {
+                AddScore(i, partialScore, partialPlayerName);
+                saved = true;
+            }
+
+            i++;
+        }
+    }
+
+    private void AddScore(int position, int points, string playerName)
+    {
+        playerScores.Add(position, new KeyValuePair<int, string>(points, playerName));
     }
 
     private void SaveScoreBoard()

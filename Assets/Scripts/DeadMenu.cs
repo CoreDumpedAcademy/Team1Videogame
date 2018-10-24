@@ -19,6 +19,7 @@ public class DeadMenu : MonoBehaviour
     {
         if (Playerdead)
         {
+            GetComponentInParent<ScoreManager>().SetScore("raular4322");
             DeadMenuUI.SetActive(true);
             Time.timeScale = 0f;
         }

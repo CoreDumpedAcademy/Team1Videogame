@@ -21,7 +21,6 @@ public class deadScript : MonoBehaviour {
         {
             player.dead = true;
             GameObject.Playerdead = true;
-            score.SetScore(score.score, "raular4322");
         }
     }
 }

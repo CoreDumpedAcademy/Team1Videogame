@@ -32,8 +32,8 @@ public class bonus : MonoBehaviour {
         {
             Destroy(col.gameObject);
             player.score += puntos;
-            player.refreshScore();
-            Debug.Log("puntos: " + puntos);
+            player.RefreshScore();
+            //Debug.Log("puntos: " + puntos);
         }
     }
 }
