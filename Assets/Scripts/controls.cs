@@ -43,11 +43,6 @@ public class controls : MonoBehaviour {
             Vector2 movement = new Vector2(direction.x * playerSpeed.x, 0);
             movement *= Time.deltaTime;
             transform.Translate(movement);
-            position = new Vector2(10f, Random.Range(-5f, 5f));
-        }
-        else
-        {
-
         }
             
     }

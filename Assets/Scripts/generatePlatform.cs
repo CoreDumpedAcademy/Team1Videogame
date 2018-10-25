@@ -34,7 +34,7 @@ public class generatePlatform : MonoBehaviour {
     }
     public void FixedUpdate()
     {
-        if (tiempo > 1f)
+        if (tiempo > 3f)
         {
             if (platform + 2 < 5)
             {
@@ -90,7 +90,7 @@ public class generatePlatform : MonoBehaviour {
     void GeneradorPlataformas()
     {   
         Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
-        Invoke("GeneradorPlataformas", 1f);
+        Invoke("GeneradorPlataformas", 3f);
     }
 
 }
