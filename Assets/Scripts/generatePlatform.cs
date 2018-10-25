@@ -5,8 +5,8 @@ using UnityEngine;
 public class generatePlatform : MonoBehaviour {
 
     public GameObject[] obj;
-    public float tiempoMin = 4f;
-    public float tiempoMax = 6f;
+    public float tiempoMin = 2f;
+    public float tiempoMax = 3f;
     Random rand = new Random();
 
     float x;

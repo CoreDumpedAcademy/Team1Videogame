@@ -17,7 +17,6 @@ public class platformMovement : MonoBehaviour {
 		movement *= Time.deltaTime;
 
 		transform.Translate (movement);
-		position = new Vector2 ( 10f,0f);
 	}
     void OnBecameInvisible()
     {
