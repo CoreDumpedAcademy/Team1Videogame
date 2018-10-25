@@ -15,7 +15,7 @@ public class generatePlatform : MonoBehaviour {
     float y2;
     float y3;
     float y4;
-    int b;
+    
 
     Vector3 pos;
     Vector3 pos2;
@@ -49,22 +49,22 @@ public class generatePlatform : MonoBehaviour {
         if (platform == 1)
         {
             transform.position = pos;
-            b = 3;
+            
         }
         if (platform == 2)
         {
             transform.position = pos2;
-            b = 3;
+       
         }
         if (platform == 3)
         {
             transform.position = pos3;
-            b = 4;
+       
         }
         if (platform == 4)
         {
             transform.position = pos4;
-            b = 4;
+     
         }
     }
 
