@@ -38,7 +38,7 @@ public class controls : MonoBehaviour {
         }
         if (platform)
         {
-            direction = new Vector2(-1, 0);
+            direction = new Vector2(-5, 0);
 
             Vector2 movement = new Vector2(direction.x * playerSpeed.x, 0);
             movement *= Time.deltaTime;
