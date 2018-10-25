@@ -9,13 +9,16 @@ public class generatePlatform : MonoBehaviour {
     public float tiempoMax = 3f;
     Random rand = new Random();
 
+    public int platform;
+    public int altura2;
+    public float tiempo;
+
     float x;
     float y;
     float z;
     float y2;
     float y3;
     float y4;
-    int b;
 
     Vector3 pos;
     Vector3 pos2;
@@ -25,17 +28,39 @@ public class generatePlatform : MonoBehaviour {
     // Use this for initialization
     void Start () {
         GeneradorPlataformas();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        platform = 3;
+        
+
+    }
+    public void FixedUpdate()
+    {
+        if (tiempo > 1f)
+        {
+            if (platform + 2 < 5)
+            {
+                altura2 = platform + 2;
+                platform = Random.Range(0, altura2);
+            }
+            else
+            {
+                altura2 = 5;
+                platform = Random.Range(0, altura2);
+            }
+            
+            tiempo = 0;
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
+        tiempo += Time.deltaTime;
 
         x = 12.4f;
-        y = Random.Range(-3f, -1.75f);
         z = 0;
-        y2 = Random.Range(-1.75f, -0.5f);
-        y3 = Random.Range(-0.5f, 0.75f);
-        y4 = Random.Range(0.75f, 2f);
+        y = Random.Range(-2.5f, -2f);
+        y2 = Random.Range(-1f, -0.5f);
+        y3 = Random.Range(0.5f, 1f);
+        y4 = Random.Range(2f, 2.5f);
 
 
         pos = new Vector3(x, y, z);
@@ -43,35 +68,29 @@ public class generatePlatform : MonoBehaviour {
         pos3 = new Vector3(x, y3, z);
         pos4 = new Vector3(x, y4, z);
 
-
-        int platform = Random.Range(1, 5);
         
         if (platform == 1)
         {
             transform.position = pos;
-            b = 3;
         }
         if (platform == 2)
         {
             transform.position = pos2;
-            b = 3;
         }
         if (platform == 3)
         {
             transform.position = pos3;
-            b = 4;
         }
         if (platform == 4)
         {
             transform.position = pos4;
-            b = 4;
         }
     }
 
     void GeneradorPlataformas()
     {   
         Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity);
-        Invoke("GeneradorPlataformas", Random.Range(tiempoMin, tiempoMax));
+        Invoke("GeneradorPlataformas", 1f);
     }
 
 }
