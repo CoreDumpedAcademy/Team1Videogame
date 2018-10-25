@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour {
 
     private const string fileName = "s.bin";
+    private const int maxRegisters = 50;
 
     public Text Score;
     public float timer;
@@ -43,7 +44,7 @@ public class ScoreManager : MonoBehaviour {
     private void AddScoreInOrder(string playerName)
     {
         if (playerScores.Count > 0) {
-            orderScoreBoard(playerName);
+            OrderScoreBoard(playerName);
         }
         else
         {
@@ -52,7 +53,7 @@ public class ScoreManager : MonoBehaviour {
         }
     }
 
-    private void orderScoreBoard(string playerName)
+    private void OrderScoreBoard(string playerName)
     {
         KeyValuePair<int, string> register;
         bool saved = false;
@@ -97,14 +98,20 @@ public class ScoreManager : MonoBehaviour {
     {
         FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate);
         BinaryWriter bw = new BinaryWriter(fs);
+        int i = 0;
 
         foreach(KeyValuePair<int, KeyValuePair<int, string>> registro in playerScores)
         {
-            Debug.Log("Puntuacion " + registro.Key + " de " + registro.Value.Value + ": " + registro.Value.Key);
+            if(i < maxRegisters)
+            {
+                Debug.Log("Puntuacion " + registro.Key + " de " + registro.Value.Value + ": " + registro.Value.Key);
 
-            bw.Write(registro.Key);
-            bw.Write(registro.Value.Key);
-            bw.Write(registro.Value.Value);
+                bw.Write(registro.Key);
+                bw.Write(registro.Value.Key);
+                bw.Write(registro.Value.Value);
+
+                i++;
+            }
         }
 
         bw.Close();
