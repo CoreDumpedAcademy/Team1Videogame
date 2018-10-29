@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour {
 
     private const string fileName = "s.bin";
-    private const int maxRegisters = 50;
+    private const int maxRegisters = 10;
 
     public Text Score;
     public float timer;
